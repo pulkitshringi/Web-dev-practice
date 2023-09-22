@@ -1,0 +1,37 @@
+div{
+    display:inline-block;
+}
+#face{
+    height:200px;
+    width:200px;
+    background-color:gold;
+    border-radius:50%;
+}
+#eye1{
+    background-color: black;
+    height:25px;
+    width:25px;
+    border-radius:50%;
+    position:absolute;
+    top:50px;
+    left:50px;
+}
+#eye2{
+    background-color: black;
+    height:25px;
+    width:25px;
+    border-radius:50%;
+    position:absolute;
+    top:50px;
+    left:120px;
+}
+#mouth{
+    height: 50px;
+    width: 100px;
+    background-color:red;
+    border-radius: 150px 150px 0 0;
+    transform:rotate(180deg);
+    position:absolute;
+    top:120px;
+    left:50px;
+}

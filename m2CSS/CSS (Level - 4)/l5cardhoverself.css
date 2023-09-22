@@ -1,0 +1,44 @@
+
+#maleimg{
+    height:120px;
+    width:120px;
+    background-image:url(../../male.png);
+    background-color: plum;
+    background-size:cover;
+}
+#maleouter{
+    margin:30px;
+    border-radius:5px;
+    height:170px;
+    width:120px;
+    border:black solid;
+box-shadow:2px 1px 2px black;
+display:inline-block;
+transition: box-shadow 0.5s;
+}
+
+
+#femaleimg{
+    height:120px;
+    width:120px;
+    background-image:url(../../female.png);
+    background-color: aqua;
+    background-size:cover;
+}
+#femaleouter{
+    border-radius:5px;
+    margin:30px;
+    height:170px;
+    width:120px;
+    border:black solid;
+    box-shadow:2px 1px 2px black;
+display:inline-block;
+transition: box-shadow 0.5s;
+}
+
+#maleouter:hover{
+    box-shadow:5px 5px 15px black;
+}
+#femaleouter:hover{
+    box-shadow:5px 5px 15px black;
+}

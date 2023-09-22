@@ -1,0 +1,21 @@
+h1{
+    letter-spacing: 10px;
+    text-align: center;
+    font-weight:bold;
+    text-decoration: red wavy underline;
+}
+p{
+    font-size:50px;
+  letter-spacing:px;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: blue dotted overline;
+}
+h2{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: double yellow line-through;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,34 @@
+#outer {
+    border:2px solid black;
+    margin:30px auto;
+    height:500px;
+    width:80%;
+    display:flex;
+    flex-direction:row;
+}
+
+#outer div{
+    height:100px;
+    width:100px;
+    /* flex-grow:1; */
+
+}
+
+#red{
+    flex:2 2 100px;
+    /* flex-basis:100px; */
+    /* flex-grow:3; */
+   /* min-width: 50px; */
+   /* flex-shrink:1; */
+}
+#green{
+    flex:1 1 100px;
+    /* flex-grow:1; */
+    /* max-width:200px; */
+    /* flex-shrink:1; */
+}
+#blue{
+    flex:100px;
+    /* flex-grow:1; */
+    /* flex-shrink:2; */
+}

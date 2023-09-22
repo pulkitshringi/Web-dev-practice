@@ -1,0 +1,25 @@
+/* #outer{
+background-color: blue;
+height:200px;
+width:200px;
+font-size:20px;
+}
+#inner{
+background-color: aqua;
+font-size:3em;
+padding:2em;
+} */
+
+/* section{
+    font-size:10px;
+}
+div{
+    font-size:2em;
+} */
+
+section{
+   font-size: 10px;
+}
+div{
+    font-size:1rem;
+}

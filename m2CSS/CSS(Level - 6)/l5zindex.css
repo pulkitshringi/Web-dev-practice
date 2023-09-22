@@ -1,0 +1,13 @@
+div{
+    background-color:red;
+    height:100px;
+    width:100px;
+    position:relative;
+    z-index:1;
+}
+div+div{
+    background-color:aqua;
+    position:relative;
+    bottom:50px;
+    z-index:0;
+}

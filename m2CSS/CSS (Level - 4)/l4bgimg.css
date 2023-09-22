@@ -1,0 +1,10 @@
+div{
+height:300px;
+width:300px;
+background-color:pink;
+text-align:center;
+margin:20px;
+padding-top:50%;
+background-image:url(../../stockimg.jpg);
+background-size:cover;
+}

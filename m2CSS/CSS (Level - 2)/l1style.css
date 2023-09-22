@@ -1,0 +1,56 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+}
+*::selection{
+    background-color:pink;
+}
+h1::first-letter,h3{                            
+    color:rgb(185, 43, 39);
+}
+
+#login,#signup{
+    color:red;                         /*Id combinator */
+}
+
+.upvote{
+    color:red;                                /*Class combinator */
+    background-color: aqua;
+}
+.mainn a{
+    color:pink;
+}
+p+h3{
+    color:rgb(185, 43, 39);        /*Sibling combinator */
+}
+div>input{
+    color:rgb(185, 43, 39);              /*Child combinator */
+}
+input[type="text"]{
+    color:purple;
+    background-color:red;
+}
+input[type="password"]{
+    color:pink;
+    background-color:black;
+}
+span>button:hover{                             /*Pseudo Classes */
+    background-color: red;
+}
+input[type="radio"]:checked + label{
+    color:gold;
+    background-color:black;
+}
+span:nth-of-type(2n+1){
+    background-color:blue;
+}
+
+#footer::first-line{
+    color:aqua;
+}
+h1{
+    color:blue;
+}
+h1{
+    color:rgb(185, 43, 39);;
+}

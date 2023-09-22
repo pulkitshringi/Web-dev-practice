@@ -1,0 +1,42 @@
+div{
+    height:100px;
+    width:100px;
+    margin:20px;
+    border:2px solid;
+    text-align: center;
+    background-color:#00000044;
+    transition:transform 3s,background-color 3s, box-shadow 3s;
+    box-shadow:5px 5px 20px black;     /*Box Shadow*/
+}
+#one:hover{
+    transform:rotate(360deg);
+    background-color:aqua;
+    box-shadow:5px 5px 5px black;
+}
+#two:hover{
+    /* transform:scale(1.5); */
+    /* transform:scaley(1.5); */
+    /* transform:scalex(1.5); */
+    transform:scale(1.5,1.5);
+    background-color: red;
+    box-shadow:5px 5px 5px black;
+}
+#three:active{
+    transform:translate(300px);
+    /* transform:translatex(300px); */
+    /* transform:translatey(300px); */
+    /* transform:translate(300px,300px); */
+    background-color: rosybrown;
+    box-shadow:5px 5px 5px black;
+}
+#four:active{
+    transform:skew(-360deg);
+    background-color:gold;
+    box-shadow:5px 5px 5px black;
+}
+#five:active{
+    transform:translate(300px) rotate(90deg) scale(1.5) skew(90deg);
+    background-color:purple;
+    color:gold;
+    box-shadow:5px 5px 5px black;
+}

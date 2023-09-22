@@ -1,0 +1,13 @@
+#outer{
+    border:2px solid green;
+    height:50px;
+    width:900px;
+    background-color:pink;
+    border-radius:6px;
+    display:flex;
+}
+
+#outer div{
+    font-size:24px;
+    margin:10px 15px auto;
+}

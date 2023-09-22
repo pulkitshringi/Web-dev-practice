@@ -1,0 +1,13 @@
+*{
+    font-family:'Courier New';
+}
+h1{
+    color:#1b74e4;
+}
+#searchbut{
+    color:white;
+    background-color:black;
+}
+.account{
+    background-color:aqua;
+}
