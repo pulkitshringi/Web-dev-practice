@@ -3,24 +3,15 @@ const app = express();
 let port = 3000;
 app.listen(port , ()=>{
     console.log(`You are listening from port ${port}`);
-})
-// app.use((req,res)=>{
-//     console.log("Response generated");
-//     res.send({
-//         name:"Pulkit",
-//         Age:21
-//     });
-// })
+});
 
-app.post("/" , (req,res)=>{
-    res.send("You contacted rooth path");
+app.get("/search",(req,res)=>{
+    let {q1,q2} = req.query;
+    if(!q1){
+        res.send(`Query Empty`);
+    }
+    res.send(`Result displayed for query ${q1} and ${q2}`);
 });
-app.post("/search" , (req,res)=>{
-    res.send("You contacted search path");
-});
-app.post("/navigation" , (req,res)=>{
-    res.send("You contacted navigation path");
-});
-app.post("*",(req,res)=>{
-    res.send("This page does not exist");
+app.get("*",(req,res)=>{
+    res.send("Page is invalid");
 })
