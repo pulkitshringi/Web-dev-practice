@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=data.name%>'s Account</title>
-    <link rel="stylesheet" href="/style.css"> <!-- default tracking from public folder-->
-</head>
+<%- include("includes/head.ejs"); %>
 <body>
     <h1>This page belongs to @<%=data.name%></h1>
     <button>Follow</button>
@@ -19,6 +11,7 @@
             <img src=<%=posts.image%>>
             <p> Likes : <%=posts.likes%> &nbsp;&nbsp; Comments : <%=posts.comments%></p>
         <% } %>
+        <%-include("includes/footer.ejs") %>
     <script src="/app.js"></script>
 </body>
 </html>
