@@ -69,3 +69,4 @@ app.delete("/posts/:id",(req,res)=>{
     posts = posts.filter((p)=>id!==p.id); // filters the posts array which does not have that id.
     res.redirect("/posts");
 })
+//lesscheck
