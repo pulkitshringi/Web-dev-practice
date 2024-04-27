@@ -1,13 +1,11 @@
 //App.jsx
 
 import './App.css'
-import Button from './Button'
-import Paragraph from './Paragraph'
+import Likebtn from './Likebtn';
 function App() {
   return(
     <>
-    <Button/>
-    <Paragraph/>
+    <Likebtn/>
     </>
 
   );
