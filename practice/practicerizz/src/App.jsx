@@ -4,12 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Headline from './Headline'
 import List from './List'
+import Iconic from './Iconic'
 function App() {
   const [count, setCount] = useState(0)
   let features = ["first","second","third"]
   return (
     <>
-      <List features={features}/>
+     <Iconic></Iconic>
     </>
   )
 }
