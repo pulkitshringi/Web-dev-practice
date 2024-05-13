@@ -19,4 +19,4 @@ export default function LudoBoard(){
             style={{backgroundColor:"red"}}>Red Count : {counts.red}</p>
         </div>
     )
-}
+}  
