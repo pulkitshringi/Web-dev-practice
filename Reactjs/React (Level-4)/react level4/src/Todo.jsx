@@ -14,7 +14,23 @@ export default function Todo(){
     let deleteTask = (id) => {
         setToDo(() => { return toDoList.filter((task) => task.key !== id)});
     }
-    
+    let updateTaskAll=()=>{
+        setToDo(()=>{
+            return toDoList.map((list)=>{ return {...list,task:list.task.toUpperCase()}})
+        })
+    }
+    let updateTask=(id)=>{
+        setToDo(()=>{
+            return toDoList.map((list)=>{
+                if(list.key==id){
+                    return {...list,task:list.task.toUpperCase()};
+                }
+                else{
+                    return {...list};
+                }
+            })
+        })
+    }
     return (
         <div>
         <h1>Todo List : </h1>
@@ -22,7 +38,9 @@ export default function Todo(){
         <input type="text" placeholder="Enter task" value={newToDo}onChange={inputChange}></input>
        <br></br><br></br>
        <button onClick={addTask}>Add Task</button>
-       <ul>{toDoList.map((t)=>{return <li key={t.key}><span>{t.task}</span> <button onClick={()=>{deleteTask(t.key)}}>Delete</button></li>})}</ul>
+       <ul>{toDoList.map((t)=>{return <li key={t.key}><span>{t.task}</span> <button onClick={()=>{deleteTask(t.key)}}>Delete</button>&nbsp;&nbsp;<button onClick={()=>{updateTask(t.key)}}>Uppercase</button></li>})}</ul>
+       <hr></hr>
+       <button onClick={updateTaskAll}>Uppercase All</button>
         </div>
     )
 }
