@@ -1,3 +1,7 @@
 // index.ts
-let age : number = 20;
-console.log(age);
+function print(val:number|null|undefined):void{
+    console.log(val);
+}
+print(10);  
+print(null);
+print(undefined);
