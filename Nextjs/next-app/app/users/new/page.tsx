@@ -1,10 +1,10 @@
-// app/users/new/page.tsx
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
-const NewUsers = () => {
+const page = () => {
   return (
-    <div>Add new page</div>
+    <div><Link href="/users">Go back to users</Link></div>
   )
 }
 
-export default NewUsers
+export default page

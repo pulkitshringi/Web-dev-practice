@@ -3,7 +3,7 @@
 import React from 'react';
 const Button = () => {
   return (
-    <button onClick={()=>{console.log("button working")}}>Click Me</button>
+    <button className={`btn btn-primary`} onClick={()=>{console.log("button working")}}>Click Me</button>
   )
 }
 

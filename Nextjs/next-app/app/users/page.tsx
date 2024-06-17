@@ -1,18 +1,20 @@
 // app/users/page.tsx
-import React from 'react'
-
+import React, { Suspense } from 'react'
+import UserTable from './UserTable';
 const page = async () => {
   interface dataa{
     id: number;
     name: string;
   }
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts/1/comments',{cache:'no-store'});
+  const res = await fetch('wrong link',{cache:'no-store'});
   const data: dataa[]= await res.json();
   return (
     <>
+    <div className='ml-3'>
     <p>{new Date().toLocaleTimeString()}</p>
-    <div>Users page</div>
-    <ul>{data.map(d=><li key={d.id}>{d.name}</li>)}</ul>
+    Users page
+    <UserTable />
+    </div>
     </>
   )
 }
