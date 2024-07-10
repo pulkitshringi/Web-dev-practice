@@ -1,0 +1,18 @@
+<!-- /chats/:id/edit (/views/edit.ejs)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Message</h1>
+    <p>Your id is <%= chat._id%></p>
+    <p>This message was sent from <%=chat.from%> to <%=chat.to%></p>
+    <form method="POST" action="/chats/<%=chat._id%>?_method=PUT">
+        <input type="text" name="message" value="<%=chat.message%>">
+        <button>Update</button>
+    </form>
+</body>
+</html>

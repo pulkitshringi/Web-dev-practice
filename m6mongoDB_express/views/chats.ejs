@@ -1,0 +1,32 @@
+<!-- views/chats.ejs -->
+<html>
+    <head>
+        <title>Whatsapp Chats</title>
+        <link rel="stylesheet" href="/chats.css">
+    </head>
+    <body>
+        <h1>Whatsapp Chats</h1>
+        <form method="get" action="/chats/new">
+            <button>New Chat</button>
+        </form>
+        <% for(chat of chats){ %>
+            <div class="chat">
+                <p><i>From:</i> <%=chat.from%></p>
+                <p><i>To</i>: <%=chat.to%></p>
+                <div class="msg">
+                <p><i>Message:</i> <%=chat.message%></p>
+                <br><br>
+                </div>
+                <hr>
+                <form method="GET" action="/chats/<%=chat._id%>/edit">
+                    <button>Edit Message</button>
+                </form>
+                <form method="POST" action="/chats/<%=chat._id%>?_method=DELETE">
+                    <button>Delete</button>
+                </form>
+                <p><%= chat.created_at.toString().split(" ")[4] %></p>
+                <p><%= chat.created_at.toString().split(" ").slice(0,4).join("-") %></p>
+            </div>
+        <%}%>
+    </body>
+</html>
