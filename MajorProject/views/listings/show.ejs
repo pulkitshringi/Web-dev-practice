@@ -1,11 +1,5 @@
 <!-- /views/listings/show.ejs -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanderlust</title>
- </head>
+<%layout('layouts/boilerplate')%>
  <body>
     <h3>Listing Details:- </h3>
     <ul>
@@ -14,5 +8,11 @@
         <li>Price: &#8377; <%=listing.price.toLocaleString('en-IN')%></li>
         <li>Description: <%=listing.description%></li>
     </ul>
+    <!-- edit link -->
+    <a href="/listings/<%=listing._id%>/edit">Edit</a>
+    <br><br>
+    <!-- delete button -->
+    <form action="/listings/<%=listing._id%>?_method=DELETE" method="POST">
+      <button>Delete listing</button>
+    </form>
  </body>
- </html>

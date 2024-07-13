@@ -1,0 +1,13 @@
+<!-- views/listings/edit.ejs -->
+<%layout('layouts/boilerplate')%>
+ <body>
+    <h3>Edit Listing:- </h3>
+    <form action="/listings/<%=listing._id%>?_method=PUT" method="POST">
+        <input type="text" name="listing[title]" value=<%=listing.title%> placeholder="Title"><br><br>
+        <input type="text" name="listing[location]" value=<%=listing.location%> placeholder="Location"><br><br>
+        <input type="number" name="listing[price]" value=<%=listing.price%> placeholder="Price"><br><br>
+        <textarea name="listing[description]" placeholder="Description"><%=listing.description%></textarea><br><br>
+        <input type="text" name="listing[image]" value=<%=listing.image.url%>  placeholder="Image URL"><br><br>
+        <button>Create</button>
+    </form>
+ </body>
