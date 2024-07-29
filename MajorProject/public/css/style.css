@@ -50,7 +50,7 @@ body{
 }
 
 /* cards */
-.card{
+.card-listing,.card-show{
     border:none !important;
     margin-bottom:2rem;
 }
@@ -79,7 +79,7 @@ body{
     opacity:0.1;
     background-color:white;
 }
-.add-btn{
+.add-btn,.edit-btn{
     background-color: #fe424d !important;
     border:none !important;
 
