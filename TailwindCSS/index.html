@@ -1,14 +1,24 @@
 <!--index.html-->
 <!DOCTYPE html>
 <head>
-  <title>Tailwind css demo</title>
+  <title>Tailwind card</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<div class="flex gap-10 flex-col lg:flex-row">
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
+<div class="border-4 rounded-lg border-gray-600 mx-28 mt-16">
+    <div class=" text-white font-semibold text-lg bg-gradient-to-r from-sky-500 to-indigo-500 h-16 flex justify-center items-center ">News you can Trust</div>
+    <div class=" mt-2 flex flex-col text-center">
+        <h1 class="text-lg font-semibold">Stay up to date with the Latest!!</h1> 
+        <p>Subscribe to our newsletter for the latest news straight into your inbox</p>
+    </p>
+    <form class="mx-40">
+    <input class=" rounded-full w-full text-center placeholder:text-sm placeholder:text-grey bg-gray-200 my-2	" type="email" placeholder="you@example.com">
+    <button class="mt-1 text-white rounded-full w-full bg-gradient-to-r from-sky-500 to-indigo-500 transform transition-transform duration-200 hover:scale-105">
+        Subscribe Now
+      </button>
+    <p class="my-3">We value your privacy</p>
+</form>
+</div>
 </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-8 offset-2">
     <h3>New Listing:- </h3>
-    <form action="/listings" class="needs-validation" method="post" novalidate>
+    <form action="/listings" class="needs-validation" method="post" novalidate enctype="multipart/form-data">
         <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input type="text" id="title"class="form-control" name="listing[title]" placeholder="Add a catchy title" required>
@@ -18,10 +18,16 @@
         <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="mb-3">
-            <label for="image" class="form-label">Image URL</label>
-            <input type="text" id="image" class="form-control" name="listing[image][url]" placeholder="Image URL">
+            <label for="image-url" class="form-label">Image URL</label>
+            <input type="text" id="image-url" class="form-control" name="listing[image][url]" placeholder="Image URL">
           <div class="invalid-feedback">Please enter a valid image URL</div>    
           <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="mb-3">
+        <label for="image-file" class="form-label">Upload image</label>
+            <input type="file" id="image-file" class="form-control" name="listing[image][url]" placeholder="Image URL">
+            <div class="invalid-feedback">Upload image</div>
+            <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="row">
             <div class="col-md-4">

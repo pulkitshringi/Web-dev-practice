@@ -1,0 +1,23 @@
+<!-- show.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show chat</title>
+</head>
+<body>
+    <div>
+        <h1>Show Chat</h1>
+        <p>Your id is <%= chat._id %></p>
+        <p>This message was sent from <%= chat.from %> to <%= chat.to %></p>
+        <p>Message: <%= chat.message %></p>
+        <a href="/chats/<%= chat._id %>/edit">Edit</a>
+        <a href="/chats">Back</a>
+        <br><br>
+        <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+            <button>Delete</button>
+        </form>
+    </div>
+</body>
+</html>

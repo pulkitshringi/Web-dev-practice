@@ -10,6 +10,7 @@ const orderSchema = new mongoose.Schema({
 });
 const Order = mongoose.model('Order', orderSchema);
 
+
 const customerSchema = new mongoose.Schema({
     name: String,
     age: Number,
@@ -20,14 +21,23 @@ const customerSchema = new mongoose.Schema({
         }
     ]
 });
+
+// add before defining the customer model
+customerSchema.post('findOneAndDelete',async function(customer){
+    if(customer.orders.length){
+        const res = await Order.deleteMany({_id: {$in: customer.orders}});
+        console.log(res);
+    }
+});
+
+
+
 const Customer = mongoose.model('Customer', customerSchema);
 
-const findCustomers = async () => {
-    const res = await Customer.find().populate('orders');
-    console.log(res[0]);
+const deleteCustomer = async () => {
+    const res = await Customer.findByIdAndDelete('66a36ab5eb83b087b3e09c4f')
 }
-findCustomers();
-
+deleteCustomer();
 
 // const addCustomers = async () => {
 //     const cust1 = new Customer({

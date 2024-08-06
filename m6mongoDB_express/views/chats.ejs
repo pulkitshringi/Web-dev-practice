@@ -18,6 +18,9 @@
                 <br><br>
                 </div>
                 <hr>
+                <form method="GET" action="/chats/<%= chat._id %>">
+                    <button type="submit">Show Message</button>
+                </form>
                 <form method="GET" action="/chats/<%=chat._id%>/edit">
                     <button>Edit Message</button>
                 </form>
