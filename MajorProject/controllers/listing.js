@@ -32,7 +32,11 @@ module.exports.showListing = async (req,res)=>{
 module.exports.newListingPOST = async (req,res,next)=>{
     const {listing} = req.body;
     const listing1 = new Listing(listing);
-    listing1.owner = req.user._id; // adding user id from req.user 
+    listing1.owner = req.user._id; 
+    if(req.file){ // if image was uploaded
+    listing1.image.url = req.file.path;
+    listing1.image.filename = req.file.filename;
+    }
     await listing1.save();
     req.flash('success','Successfully created new listing');
     res.redirect('/listings'); 

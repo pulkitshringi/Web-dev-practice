@@ -12,7 +12,8 @@ const upload = multer({ dest: 'uploads/' });
 
 // listing route && new listing route
 router.route('/').get(wrapAsync(listingController.index))
-.post(validateListing,upload.single('listing[image][url]'),wrapAsync(listingController.newListingPOST));
+.post(upload.single('listing[image][url]'),wrapAsync(listingController.newListingPOST));
+
 
 // new listing route
 router.get('/new',isLoggedIn,listingController.newListing);

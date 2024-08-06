@@ -20,6 +20,7 @@ const path = require ('path');
 app.set ('view engine', 'ejs');
 app.engine('ejs',ejsmate);
 app.use(express.static(path.join(__dirname,'public')));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 const sessionOptions = {secret:'projectsecret', resave: false, saveUninitialized: true,
     cookie:{httpOnly:true,
