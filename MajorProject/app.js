@@ -1,4 +1,8 @@
 // app.js
+if(process.env.NODE_ENV !== 'production'){
+require('dotenv').config()
+}
+console.log(process.env.SECRET);
 const express = require ('express');
  const listingRouter = require('./routes/listing');
  const reviewRouter = require('./routes/review');
@@ -64,7 +68,7 @@ app.get('/demouser',async(req,res)=>{
 
 
 app.get ('/', (req, res) => {
-    res.send ('Hello Wanderlust :)');
+    res.redirect('/listings');
 });
 app.use('/listings',listingRouter);
 app.use('/listings/:id/reviews',reviewRouter);

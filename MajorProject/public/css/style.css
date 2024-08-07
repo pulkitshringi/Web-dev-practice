@@ -84,3 +84,8 @@ body{
     border:none !important;
 
 }
+
+#map{
+    height:300px;
+    width:100%;
+}
