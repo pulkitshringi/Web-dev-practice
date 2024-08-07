@@ -27,10 +27,10 @@
         <%
          if(currentUser) { %> 
          <div class="row">
-    <div class="col-md-2 mb-2">
+    <div class="col-auto">
     <a class="btn btn-dark edit-btn"href="/listings/<%=listing._id%>/edit">Edit</a>
     </div>
-    <div class="col-md-2">
+    <div class="col-auto">
     <form action="/listings/<%=listing._id%>?_method=DELETE" method="POST">
       <button class="btn btn-dark">Delete </button>
     </form>
@@ -76,7 +76,6 @@
           <div class="card-body">
             <div class="card-title"><b>@<%=review.author.username%></b></div>
             <p class="card-text"><%=review.comment%></p>
-            <h3>Rated element name</h3>
   <p class="starability-result card-text" data-rating="<%=review.rating%>">
     Rated: 3 stars
   </p>
