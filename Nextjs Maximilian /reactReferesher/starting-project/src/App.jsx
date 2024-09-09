@@ -1,7 +1,10 @@
 // App.jsx
-import Post from './components/Post'
+import ListingPost from "./components/ListingPost";
 function App() {
-  return <Post/>;
+  return (
+  <main>
+  <ListingPost/>
+  </main>);
 }
 
 export default App;
