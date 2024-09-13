@@ -14,16 +14,20 @@ function NewPost(props) {
      setAuthor(event.target.value);
  };
  const submitHandler = (event) => {
-      event.preventDefault();
-      const post = {
-        body: bodyContent,    // we could add validations
-        author: author,
-        id: uuidv4()
-      };
-      console.log(post);
-      props.onAddPost(post);
-      props.onCancel();
-    }
+  event.preventDefault();
+  fetch('http://localhost:8080/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ body: bodyContent ,author: author})
+  }).then((response)=>{
+    return response.json();
+  }).then((data)=>{console.log(data)});
+  const post = {id: uuidv4(), body: bodyContent, author: author};
+  props.onAddPost(post);
+  props.onCancel();
+};
   
   return (
     <form className={classes.form} onSubmit={submitHandler}>

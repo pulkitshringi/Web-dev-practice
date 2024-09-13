@@ -1,11 +1,19 @@
 // components/ListingPost.jsx
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Post from './Post';
 import styles from './ListingPost.module.css';
 import NewPost from './NewPost';
 import Modal from './Modal';
 
 const ListingPost = (prop) => {
+useEffect(()=>{
+  const fetchPosts = async () => {
+  const response = await fetch('http://localhost:8080/posts');
+  const data = await response.json();
+  setPosts(data.posts);
+  }
+  fetchPosts();
+},[]);
 
   const [posts, setPosts] = useState([]);
 
@@ -14,6 +22,8 @@ const ListingPost = (prop) => {
       return [post, ...prevPosts];
     })
   }
+
+
 
   return (
     <>
