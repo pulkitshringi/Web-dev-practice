@@ -8,14 +8,18 @@ import Modal from './Modal';
 const ListingPost = (prop) => {
 useEffect(()=>{
   const fetchPosts = async () => {
+    setIsFetching(true); // fetching so true
   const response = await fetch('http://localhost:8080/posts');
   const data = await response.json();
-  setPosts(data.posts);
+  setPosts(data.posts || []);
+  setIsFetching(false); // fetching complete so false
   }
   fetchPosts();
 },[]);
 
   const [posts, setPosts] = useState([]);
+  // isFetching State 
+  const [isFetching, setIsFetching] = useState(false);
 
   const onAddPost = (post) => {
     setPosts((prevPosts) =>{
@@ -32,7 +36,7 @@ useEffect(()=>{
     onCancel={prop.onHideProp} onAddPost={onAddPost}
     />
     </Modal>}
-  {posts.length === 0 && <p style={{textAlign:"center"}}>No posts yet. Would you like to add one?</p>}
+  {!isFetching && posts.length === 0 && <p style={{textAlign:"center"}}>No posts yet. Would you like to add one?</p>}
 
   {posts.length > 0 && <ul className={styles.posts}>
       {posts.map((post) =>{
@@ -40,7 +44,7 @@ useEffect(()=>{
       })}
     </ul> 
     }
-
+    {(isFetching && <p style={{textAlign:"center"}}>Loading...</p>)}
     </>
   )
 }
