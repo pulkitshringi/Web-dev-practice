@@ -1,3 +1,4 @@
+// data/posts.js
 const fs = require('node:fs/promises');
 
 async function getStoredPosts() {
