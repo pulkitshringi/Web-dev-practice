@@ -1,6 +1,7 @@
 // components/MainHeader.jsx
 
 import { MdPostAdd, MdMessage } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 import classes from './MainHeader.module.css';
 
@@ -12,10 +13,7 @@ function MainHeader(prop) {
         React Poster
       </h1>
       <p>
-        <button className={classes.button} onClick={prop.onShowProp}>
-          <MdPostAdd size={18} />
-          New Post
-        </button>
+      <Link to='new' className={classes.button}>Add New Post</Link>
       </p>
     </header>
   );

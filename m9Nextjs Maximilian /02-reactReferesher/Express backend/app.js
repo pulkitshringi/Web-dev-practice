@@ -1,12 +1,14 @@
 // app.js
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const { getStoredPosts, storePosts } = require('./data/posts');
 
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use((req, res, next) => {
   // Attach CORS headers
@@ -19,7 +21,6 @@ app.use((req, res, next) => {
 
 app.get('/posts', async (req, res) => {
   const storedPosts = await getStoredPosts();
-  const time = await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500)); // adding delay
   res.json({ posts: storedPosts });
 });
 
