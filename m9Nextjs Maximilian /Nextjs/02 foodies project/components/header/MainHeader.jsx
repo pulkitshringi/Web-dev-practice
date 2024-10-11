@@ -2,7 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import logo from '@/assets/logo.png' // an object
-import styles from '@/components/MainHeader.module.css' 
+import styles from '@/components/header/MainHeader.module.css' 
 import Image from 'next/image'
 
 const MainHeader = () => {
