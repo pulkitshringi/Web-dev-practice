@@ -1,4 +1,21 @@
-h3{
-    color:pink;
-    background-color: black;
+div div{
+   height:100px;
+   width:100px;
+   background-color:green;
+   display:inline-block;
+   margin:1rem;
+   border:2px black solid;
+   opacity:1;
+   box-shadow:4px 4px black;
+}
+#outer{
+   background-color: pink;
+   display:flex;
+   flex-wrap:wrap;
+   flex-direction:row;
+   justify-content:space-evenly;
+}
+
+#one{
+   width:200px;
 }
