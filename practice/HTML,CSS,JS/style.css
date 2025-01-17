@@ -1,4 +1,4 @@
-div div{
+/* div div{
    height:100px;
    width:100px;
    background-color:green;
@@ -11,11 +11,12 @@ div div{
 #outer{
    background-color: pink;
    display:flex;
-   flex-wrap:wrap;
-   flex-direction:row;
-   justify-content:space-evenly;
 }
-
-#one{
-   width:200px;
-}
+@media(orientation:portrait){
+   #outer{
+      flex-direction: column;
+   }
+} */
+ form{
+   margin-left:12px;
+ }
