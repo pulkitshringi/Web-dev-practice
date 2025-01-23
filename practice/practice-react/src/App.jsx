@@ -2,14 +2,16 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Heading from './Heading';
-import Button from './Button';
-function App(){
+import Button from './Button.jsx';
+
+
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <>
-      <Heading/>
-      <Button/>
-      <p>Some calculations : {2+3}</p>
+    <button>Click me</button>
+    <Button/>
     </>
   )
 }
