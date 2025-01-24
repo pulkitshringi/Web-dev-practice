@@ -5,12 +5,16 @@ import './App.css'
 import Content from './Content'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+    let [cnt,setCnt] = useState(0);
   return (
     <>
-     <button style="color:green;">Click Me</button>
-     <Content content="Imma DISCO BARBER"/>
+      <h3>{cnt}</h3>
+    <form onSubmit={(e) => {
+    e.preventDefault();
+    setCnt((cnt) => cnt + 1);
+  }}>
+      <button>Click me cums so aride</button>
+    </form>
     </>
   )
 }
